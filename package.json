@@ -1,0 +1,47 @@
+{
+  "name": "portfolio_arsh",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.12.1",
+    "@react-three/drei": "^9.92.1",
+    "@react-three/fiber": "^8.15.12",
+    "@tabler/icons-react": "^3.5.0",
+    "@types/node": "^20.12.12",
+    "@types/react": "^18.3.3",
+    "@types/three": "^0.159.0",
+    "aos": "^2.3.4",
+    "clsx": "^2.1.1",
+    "framer-motion": "^10.18.0",
+    "gsap": "^3.12.4",
+    "maath": "^0.10.4",
+    "next": "14.0.4",
+    "react": "^18",
+    "react-countup": "^6.5.3",
+    "react-dom": "^18",
+    "react-element-to-jsx-string": "^15.0.0",
+    "react-icons": "^4.12.0",
+    "react-tilt": "^1.0.2",
+    "react-vertical-timeline-component": "^3.6.0",
+    "sass": "^1.69.5",
+    "sheryjs": "^1.0.0-beta.0.1.7",
+    "styled-components": "^6.1.11",
+    "tailwind-merge": "^2.3.0",
+    "three": "^0.159.0",
+    "typescript": "^5.4.5",
+    "typewriter-effect": "^2.21.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0"
+  }
+}
