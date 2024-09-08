@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const HireMe = () => {
   return (
-    <div className="fixed right-4 bottom-0 flex items-center justify-center overflow-hidden">
+    <div className="fixed -left-7 -bottom-7 flex items-center justify-center overflow-hidden">
       <div className="w-48 h-auto flex items-center justify-center">
         <img
           className='animate-spin-slow'

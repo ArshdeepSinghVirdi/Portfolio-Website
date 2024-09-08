@@ -1,13 +1,16 @@
 .nav{
  height: 100%;
+ z-index: 9999;
  padding: 100px 40px 50px 40px;
  box-sizing: border-box;   
  display: flex;
  flex-direction: column;
  justify-content: space-between;
+ overflow: visible;
  .body{
     display: flex;
     flex-direction: column;
+    z-index: 9999;
     gap: 10px;
 
     .linkContainer{

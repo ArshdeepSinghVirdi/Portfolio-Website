@@ -12,8 +12,8 @@ module.exports = {
         mont: ['var(--font-mont)', ...fontFamily.sans],
       },
       colors: {
-        dark: "#1b1b1b",
-        light: "#f5f5f5",
+        dark: "#f5f5f5",
+        light: "#0B0909",
         primary: "#B63E96",
         primaryDark: "#358E6D9",
         customRGB: "rgb(195, 101, 170)"
@@ -23,7 +23,7 @@ module.exports = {
         aurora: "aurora 60s linear infinite",
       },
       backgroundImage: {
-        circularLight: 'repeating-radial-gradient(rgba(0,0,0,0.4) 1px,#f5f5f5 5px,#f5f5f5 100px);'
+        circularLight: 'repeating-radial-gradient(rgba(255,255,255,0.3) 1px, #000000 10px, #000000 100px)',
       },
       keyframes: {
         aurora: {

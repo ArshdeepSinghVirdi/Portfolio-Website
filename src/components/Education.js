@@ -35,7 +35,7 @@ const Education = () => {
     <div className="my-40 -mt-7">
       <h2
         className="font-bold text-8xl mb-32
-       w-full text-center"
+       w-full text-center text-white"
       >
         Education
       </h2>
@@ -44,12 +44,12 @@ const Education = () => {
           style={{ scaleY: scrollYProgress }}
           className="absolute left-9 top=0 w-[4px] h-full bg-dark origin-top"
         />
-        <ul className="w-full flex flex-col items-start justify-between ml-4">
+        <ul className="w-full flex flex-col items-start justify-between ml-4 text-white">
           <Details
             type="Bachelor of Technology in Computer Science"
             time="2022-Present"
             place="SRM Institute of Science and Technology"
-            CGPA="9.93"
+            CGPA="9.88"
           />
 
           <Details

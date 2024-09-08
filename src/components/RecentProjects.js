@@ -78,9 +78,9 @@ const RecentProjects = () => {
               className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem]  flex items-center justify-center sm:w-[570px] w-full max-w-[80vw]"
             >
               <PinContainer title={link} href={link}>
-                <div className="relative flex items-center justify-center sm:w-[570px]  w-full max-w-[80vw] overflow-hidden h-[30vh]  sm:h-[40vh] mb-10">
+                <div className="relative flex items-center justify-center sm:w-[570px]  w-full max-w-[80vw] overflow-hidden h-[30vh]  sm:h-[40vh] mb-10 text-white">
                   <div
-                    className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#361f2f]"
+                    className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#ab5a93] text-white"
                     
                   >
                   </div>
@@ -90,19 +90,19 @@ const RecentProjects = () => {
                     className="z-10 absolute bottom-0 w-full h-full object-cover transform rotate-3"
                   />
                 </div>
-                <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+                <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1 text-white">
                   {title}
                 </h1>
-                <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2">
+                <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2 text-white">
                   {des}
                 </p>
 
-                <div className="flex items-center justify-between mt-7 mb-3">
+                <div className="flex items-center justify-between mt-7 mb-3 text-white">
                   <div className="flex items-center">
                     {iconLists.map((icon, index) => (
                       <div
                         key={icon}
-                        className="border border-black/[0.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                        className="border border-black/[0.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center text-white"
                         style={{ transform: `translateX(-${5 * index * 2}px)` }}
                       >
                         <img src={icon} alt={icon} className="p-2" />
@@ -110,8 +110,8 @@ const RecentProjects = () => {
                     ))}
                   </div>
                   <div className="flex justify-center items-center">
-                    <p className="flex lg:text-xl md:text-xs text-sm text-purple">Check</p>
-                    <FaLocationArrow className="ms-3" color="#361f2f"
+                    <p className="flex lg:text-xl md:text-xs text-sm text-purple text-white">Check</p>
+                    <FaLocationArrow className="ms-3" color="#ab5a93"
                     size={24}/>
                   </div>
                 
