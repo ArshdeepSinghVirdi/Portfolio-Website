@@ -91,7 +91,7 @@ const Contact = () => {
           <h2 style={{ color: "rgb(195, 101, 170)", fontWeight: "bold" }}>
             Address
           </h2>
-          <span style={{ color: "#d3d3d3" }}>Jamshedpur, Jugsalai</span>
+          <span style={{ color: "#d3d3d3" }}>Jugsalai, Jamshedpur</span>
         </motion.div>
         <motion.div className={styles.item} variants={variants}>
           <h2 style={{ color: "rgb(195, 101, 170)", fontWeight: "bold" }}>
