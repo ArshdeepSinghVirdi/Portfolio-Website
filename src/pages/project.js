@@ -8,7 +8,7 @@ import profile from "../../public/Arsh2.png";
 
 
 const project = () => {
-  const word = "Imagination Truimps Knowledge!";
+  const word = "Imagination Triumphs Knowledge!";
   return (
     <>
       <Head>
