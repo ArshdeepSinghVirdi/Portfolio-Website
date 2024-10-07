@@ -1,13 +1,40 @@
-.header{
-    position: fixed;
-    right: 65px;
+.header {
+    position: relative;
+    right: 35px;
     top: 25px;
+}
 
-    .menu{
-        position: relative;
-        width: 400px;
-        height: 480px;
-        background-color: rgb(195, 101, 170);
-        border-radius: 25px;
+.menu {
+    position: absolute;
+    width: 400px;
+    height: 480px;
+    background-color: rgb(195, 101, 170);
+    border-radius: 25px;
+    z-index: 100;
+    margin: auto;
+}
+
+@media (max-width: 768px) { 
+    .header {
+        right: 20px; 
+        top: 20px;  
+    }
+
+    .menu {
+        width: 300px; 
+        height: 400px; 
+    }
+}
+
+@media (max-width: 480px) { 
+    .header {
+        right: 10px; 
+        top: 14px;   
+    }
+
+    .menu {
+        width: 100%; 
+        height: auto;
+        border-radius: 0; 
     }
 }

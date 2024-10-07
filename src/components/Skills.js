@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import useScrollDirection from "./useScrollDirection"; 
+import useScrollDirection from "./useScrollDirection";
 
 const Skill = ({ name, x, y, controls }) => {
   return (
@@ -8,10 +8,10 @@ const Skill = ({ name, x, y, controls }) => {
       className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark cursor-pointer absolute"
       whileHover={{ scale: 1.05 }}
       initial={{ x: 0, y: 0 }}
-      animate={controls}  
+      animate={controls}
       whileInView={{ x: x, y: y }}
       transition={{ duration: 1.5 }}
-      viewport={{ once: false }}  
+      viewport={{ once: false }}
     >
       {name}
     </motion.div>
@@ -24,7 +24,7 @@ const Skills = () => {
 
   useEffect(() => {
     if (scrollDirection === "down" || scrollDirection === "up") {
-      controls.start({ x: 0, y: 0 }); 
+      controls.start({ x: 0, y: 0 });
       controls.start({
         x: [0, 0],
         y: [0, 0],
@@ -35,7 +35,7 @@ const Skills = () => {
 
   return (
     <>
-      <h2 className="font-bold text-8xl w-full text-center py-20 text-white">
+      <h2 className="font-bold text-6xl md:text-8xl w-full text-center py-12 md:py-20 text-white">
         Skills
       </h2>
       <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight">

@@ -10,6 +10,7 @@ import Navbar from "../components/Button/index.jsx";
 import Nav from "../components/Nav/index.jsx";
 import { AnimatePresence, motion } from "framer-motion";
 import { AuroraBackground } from "../components/AuroraBg.tsx";
+import Cursor from "../components/MovingCursor/Cursor.jsx";
 
 const variants = {
   open: {
@@ -38,6 +39,7 @@ export default function App({ Component, pageProps }) {
   const [countingComplete, setCountingComplete] = useState(false);
   const [initialLoad, setInitialLoad] = useState(true);
   const [isActive, setIsActive] = useState(false);
+  const [showCursor, setShowCursor] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -45,11 +47,13 @@ export default function App({ Component, pageProps }) {
       const isCountingComplete = sessionStorage.getItem("countingComplete");
       if (isCountingComplete) {
         setCountingComplete(true);
+        setShowCursor(true);
         setInitialLoad(false);
       } else {
         const timer = setTimeout(() => {
           setCountingComplete(true);
           setInitialLoad(false);
+          setShowCursor(true);
           sessionStorage.setItem("countingComplete", "true");
         }, 4000);
 
@@ -57,6 +61,7 @@ export default function App({ Component, pageProps }) {
       }
     } else {
       setCountingComplete(true);
+      setShowCursor(true);
     }
   }, [initialLoad, router.pathname]);
 
@@ -64,6 +69,7 @@ export default function App({ Component, pageProps }) {
     if (router.asPath === "/") {
       setCountingComplete(false);
       setInitialLoad(true);
+      setShowCursor(false);
       sessionStorage.removeItem("countingComplete");
     }
   }, [router.asPath]);
@@ -91,9 +97,7 @@ export default function App({ Component, pageProps }) {
                   animate={isActive ? "open" : "closed"}
                   initial="closed"
                 >
-                  <AnimatePresence>
-                    {isActive && <Nav />}
-                  </AnimatePresence>
+                  <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
                 </motion.div>
                 <Navbar isActive={isActive} setIsActive={setIsActive} />
               </div>
@@ -112,6 +116,7 @@ export default function App({ Component, pageProps }) {
             </div>
           </>
         )}
+        {showCursor && <Cursor />}
       </main>
     </>
   );

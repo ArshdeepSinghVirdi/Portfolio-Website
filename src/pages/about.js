@@ -27,7 +27,7 @@ const About = () => {
         <meta name="description" content="any description" />
       </Head>
       <TransitionEffect />
-      <div className="flex w-full flex-col items-center justify-center px-10">
+      <div className="flex w-full flex-col items-center justify-center lg:px-10">
         <div className="absolute top-0 left-3">
           <Image src={profile} alt="Arsh" className="w-20 h-25" />
         </div>
@@ -38,7 +38,7 @@ const About = () => {
         )}
 
         <div className="my-10 mt-20 flex justify-center">
-          <div className="relative w-3/4 sm:w-3/4 p-4 shadow-xl rounded-md text-center transform transition-transform duration-300 hover:translate-x-2 hover:translate-y-[-2px]">
+          <div className="relative w-3/4 sm:w-3/4 p-2 lg:p-4 shadow-xl rounded-md text-center transform transition-transform duration-300 hover:translate-x-2 hover:translate-y-[-2px]">
             <div
               className="absolute inset-0 bg-cover bg-center opacity-80 rounded-xl"
               style={{
