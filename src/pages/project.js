@@ -4,7 +4,7 @@ import Image from "next/image";
 import Project from "../components/RecentProjects";
 import { TextGenerateEffects } from "../components/TextAnimation";
 import TransitionEffect from "../components/TransitionEffect";
-import profile from "../../public/Arsh2.png"; 
+import profile from "../../public/Arsh2.png";
 
 
 const project = () => {
