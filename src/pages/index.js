@@ -48,6 +48,7 @@ export default function Home() {
   }, []);
 
   const getResponsiveClasses = () => {
+
     if (windowWidth >= 1024) {
       return {
         fontSize: 'text-9xl',
@@ -58,13 +59,32 @@ export default function Home() {
       };
     } else if (windowWidth >= 768) {
       return {
-        fontSize: 'text-9xl',
-        imageWidth: '280px',
-        imageHeight: '125px',
+        fontSize: 'text-8xl',
+        imageWidth: '260px',
+        imageHeight: '120px',
         spacing: 'mb-7',
         padding: 'pl-10',
       };
-    } else {
+    }
+    else if (windowWidth >= 625) {
+      return {
+        fontSize: 'text-7xl',
+        imageWidth: '240px',
+        imageHeight: '110px',
+        spacing: 'mb-5',
+        padding: 'pl-6',
+      };
+    }
+    else if (windowWidth >= 500) {
+      return {
+        fontSize: 'text-6xl',
+        imageWidth: '220px',
+        imageHeight: '102px',
+        spacing: 'mb-5',
+        padding: 'pl-6',
+      };
+    }
+    else {
       return {
         fontSize: 'text-5xl',
         imageWidth: '200px',

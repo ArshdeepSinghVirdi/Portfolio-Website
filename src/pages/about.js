@@ -38,7 +38,7 @@ const About = () => {
         )}
 
         <div className="my-10 mt-20 flex justify-center">
-          <div className="relative w-3/4 sm:w-3/4 p-2 lg:p-4 shadow-xl rounded-md text-center transform transition-transform duration-300 hover:translate-x-2 hover:translate-y-[-2px]">
+          <div className="relative w-3/4 sm:w-3/4 p-2 lg:p-4 shadow-xl rounded-md transform transition-transform duration-300 hover:translate-x-2 hover:translate-y-[-2px]">
             <div
               className="absolute inset-0 bg-cover bg-center opacity-80 rounded-xl"
               style={{
@@ -47,12 +47,12 @@ const About = () => {
               }}
             ></div>
             <div className="relative p-5 bg-black bg-opacity-80 rounded-md">
-              <h2 className="text-3xl font-bold mb-3 text-white">
+              <h2 className="text-3xl font-bold mb-3 text-white text-center">
                 A <span style={{ color: "rgb(195, 101, 170)" }}> Glimpse</span>{" "}
                 Of Me
               </h2>
               {isClient && (
-                <p className="mb-3 text-lg text-justify text-white">
+                <p className="mb-3 text-lg text-white">
                   <TextGenerateEffect words={words} />
                 </p>
               )}
