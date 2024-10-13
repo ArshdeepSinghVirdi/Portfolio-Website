@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+@media only screen and (max-width: 575px) {
+    .style_menu__OGyfG {
+        border-radius: 40px !important;
+    }
+}

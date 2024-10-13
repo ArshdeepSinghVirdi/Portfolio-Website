@@ -24,7 +24,7 @@
     z-index: 9999;
     background-color: rgb(195, 101, 170);
     text-transform: uppercase;
-    font-size: 16px; 
+    font-size: 16px;
     color: black;
 }
 
@@ -68,51 +68,54 @@
     opacity: 0;
     transform-origin: bottom center;
 }
-@media (max-width: 768px) { 
+
+@media (max-width: 768px) {
     .button {
-        width: 80px; 
+        width: 80px;
         height: 28px;
-        right: 10px; 
+        right: 14px !important;
         top: 10px;
     }
 
     .button .el {
-        font-size: 14px; 
+        font-size: 14px !important;
+        width: 100%;
+        border-radius: 40px !important;
     }
 
     .nav {
-        padding: 80px 30px 40px 30px; 
+        padding: 80px 30px 40px 30px;
     }
 
     .nav .body a {
-        font-size: 30px; 
+        font-size: 30px;
     }
 }
 
-@media (max-width: 480px) { 
+@media (max-width: 480px) {
     .button {
-        width: 70px; 
+        width: 70px;
         height: 25px;
-        right: 5px; 
+        right: 5px;
         top: 5px;
     }
 
     .button .el {
-        font-size: 12px; 
+        font-size: 12px;
     }
 
     .nav {
-        padding: 60px 20px 30px 20px; 
-        position: fixed; 
-        width: 100%; 
+        padding: 60px 20px 30px 20px;
+        position: fixed;
+        width: 100%;
     }
 
     .nav .body a {
-        font-size: 25px; 
+        font-size: 25px;
     }
 
     .nav .footer a {
-        width: 100%; 
-        text-align: center; 
+        width: 100%;
+        text-align: center;
     }
 }

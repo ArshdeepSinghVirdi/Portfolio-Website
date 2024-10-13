@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./style.module.scss";
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export default function index({ isActive, setIsActive }) {
   return (
@@ -10,16 +10,16 @@ export default function index({ isActive, setIsActive }) {
       }}
       className={styles.button}
     >
-      <motion.div 
-      className={styles.slider}
-      animate={{top: isActive ? "-100%": "0"}}
-      transition={{duration: 1 , ease: [0.76, 0, 0.24, 1]}}
+      <motion.div
+        className={styles.slider}
+        animate={{ top: isActive ? "-100%" : "0" }}
+        transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
       >
         <div className={styles.el}>
-          <PerspectiveText label="Menu"/>
+          <PerspectiveText label="Menu" />
         </div>
         <div className={styles.el}>
-        <PerspectiveText label="Close"/>
+          <PerspectiveText label="Close" />
         </div>
       </motion.div>
     </div>
@@ -27,11 +27,11 @@ export default function index({ isActive, setIsActive }) {
 }
 
 
-function PerspectiveText({label}){
-    return(
-        <div className={styles.perspectiveText}>
-            <p>{label}</p>
-            <p>{label}</p>
-        </div>
-    )
+function PerspectiveText({ label }) {
+  return (
+    <div className={styles.perspectiveText}>
+      <p>{label}</p>
+      <p>{label}</p>
+    </div>
+  )
 }
