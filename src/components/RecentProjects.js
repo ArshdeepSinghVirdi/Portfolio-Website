@@ -17,13 +17,13 @@ const projects = [
       "/GenAi.png",
       "/react.png",
     ],
-    link: "https://www.apple.com/",
+    link: "https://github.com/ArshdeepSinghVirdi/GPT-Teacher",
   },
   {
     id: 2,
-    title: "Generative Pre-Trained Transformer - Teacher",
-    des: "An AI Based Learning website where anyone can upload any ppt and can question to our model and can get answers.",
-    img: "/img.png",
+    title: "CourseSphere - AI Course Generator",
+    des: "Built an AI-driven course generator for personalized course creation based on user preferences. Integrated a payment gateway also to manage subscriptions and limit free course generation to five.",
+    img: "/img2.jpg",
     iconLists: [
       "/react.png",
       "/GenAi.png",
@@ -31,12 +31,12 @@ const projects = [
       "/GenAi.png",
       "/react.png",
     ],
-    link: "https://www.apple.com/",
+    link: "https://coursesphere.vercel.app/",
   },
   {
     id: 3,
-    title: "Generative Pre-Trained Transformer - Teacher",
-    des: "An AI Based Learning website where anyone can upload any ppt and can question to our model and can get answers.",
+    title: "AI Gallery App",
+    des: "Developed the AI Gallery App using Flutter and implemented Firebase for authentication along with Rive. Integrated AI-powered feature for image search and incorporated image editing functionality",
     img: "/img.png",
     iconLists: [
       "/react.png",
@@ -45,13 +45,13 @@ const projects = [
       "/GenAi.png",
       "/react.png",
     ],
-    link: "https://www.apple.com/",
+    link: "https://github.com/ArshdeepSinghVirdi/AI-Gallery-App",
   },
   {
     id: 4,
-    title: "Generative Pre-Trained Transformer - Teacher",
-    des: "An AI Based Learning website where anyone can upload any ppt and can question to our model and can get answers.",
-    img: "/img.png",
+    title: "E-commerce Website",
+    des: " Developed a full-stack e-commerce platform with product browsing, authentication, and order management. Implemented an admin panel for managing products, users, and orders efficiently.",
+    img: "/img3.jpg",
     iconLists: [
       "/react.png",
       "/GenAi.png",
@@ -59,7 +59,7 @@ const projects = [
       "/GenAi.png",
       "/react.png",
     ],
-    link: "https://www.apple.com/",
+    link: "https://ecommerce-rho-six-68.vercel.app/auth/login",
   },
 ];
 
