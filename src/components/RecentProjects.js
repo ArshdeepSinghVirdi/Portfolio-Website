@@ -114,7 +114,6 @@ const RecentProjects = () => {
                     <FaLocationArrow className="ms-3" color="#ab5a93"
                     size={24}/>
                   </div>
-                
                 </div>
               </PinContainer>
             </div>
