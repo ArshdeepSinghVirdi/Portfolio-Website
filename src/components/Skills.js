@@ -57,7 +57,7 @@ const Skills = () => {
         <Skill name="Framer Motion" x="-42vw" y="-5vw" controls={controls} />
         <Skill name="Tailwind CSS" x="15vw" y="18vw" controls={controls} />
         <Skill name="Git/Github" x="20vw" y="-5vw" controls={controls} />
-        <Skill name="Gen AI" x="43vw" y="5vw" controls={controls} />
+        <Skill name="AI ML" x="43vw" y="5vw" controls={controls} />
         <Skill name="AutoCad" x="-30vw" y="2vw" controls={controls} />
       </div>
     </>
