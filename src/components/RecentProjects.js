@@ -37,7 +37,7 @@ const projects = [
     id: 3,
     title: "AI Gallery App",
     des: "Developed the AI Gallery App using Flutter and implemented Firebase for authentication along with Rive. Integrated AI-powered feature for image search and incorporated image editing functionality",
-    img: "/img.png",
+    img: "/aigalleryapp.png",
     iconLists: [
       "/react.png",
       "/GenAi.png",
