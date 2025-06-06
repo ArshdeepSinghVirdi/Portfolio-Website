@@ -45,20 +45,24 @@ const Skills = () => {
         >
           Web
         </motion.div>
-        <Skill name="CSS" x="-14vw" y="2vw" controls={controls} />
+        <Skill name="Java" x="-14vw" y="2vw" controls={controls} />
         <Skill name="Javascript" x="-12vw" y="-10vw" controls={controls} />
         <Skill name="ReactJs" x="20vw" y="6vw" controls={controls} />
-        <Skill name="NextJs" x="0vw" y="12vw" controls={controls} />
+        <Skill name="NextJs" x="0vw" y="10vw" controls={controls} />
         <Skill name="NodeJs" x="-23vw" y="-15vw" controls={controls} />
         <Skill name="ExpressJs" x="15vw" y="-14vw" controls={controls} />
         <Skill name="MongoDB" x="36vw" y="-5vw" controls={controls} />
         <Skill name="Flutter" x="0vw" y="-20vw" controls={controls} />
-        <Skill name="Material UI" x="-27vw" y="18vw" controls={controls} />
-        <Skill name="Framer Motion" x="-42vw" y="-5vw" controls={controls} />
+        <Skill name="WordPress" x="-7vw" y="18vw" controls={controls} />
+        <Skill name="Motion/GSap" x="-40vw" y="-5vw" controls={controls} />
         <Skill name="Tailwind CSS" x="15vw" y="18vw" controls={controls} />
         <Skill name="Git/Github" x="20vw" y="-5vw" controls={controls} />
-        <Skill name="AI ML" x="43vw" y="5vw" controls={controls} />
-        <Skill name="AutoCad" x="-30vw" y="2vw" controls={controls} />
+        <Skill name="AI ML" x="41vw" y="5vw" controls={controls} />
+        <Skill name="AutoCad" x="-40vw" y="8vw" controls={controls} />
+        <Skill name="Java" x="36vw" y="15vw" controls={controls} />
+        <Skill name="Python" x="35vw" y="-12vw" controls={controls} />
+        <Skill name="C/C++" x="-30vw" y="16vw" controls={controls} />
+        <Skill name="SQL" x="-30vw" y="2vw" controls={controls} />
       </div>
     </>
   );
