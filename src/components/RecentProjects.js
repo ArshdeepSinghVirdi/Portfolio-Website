@@ -21,9 +21,9 @@ const projects = [
   },
   {
     id: 2,
-    title: "CourseSphere - AI Course Generator",
-    des: "Built an AI-driven course generator for personalized course creation based on user preferences. Integrated a payment gateway also to manage subscriptions and limit free course generation to five.",
-    img: "/img2.jpg",
+    title: "VigilVault",
+    des: " Built a smart ATM threat detection system using YOLOv8 for CCTV and Isolation Forest for fraud detection. Implemented automated email alerts with threat images mapped to banks via ATM ID.",
+    img: "/img5.png",
     iconLists: [
       "/react.png",
       "/GenAi.png",
@@ -31,8 +31,9 @@ const projects = [
       "/GenAi.png",
       "/react.png",
     ],
-    link: "https://coursesphere.vercel.app/",
+    link: "https://github.com/ArshdeepSinghVirdi/VigilVault",
   },
+  
   {
     id: 3,
     title: "AI Gallery App",
@@ -61,6 +62,36 @@ const projects = [
     ],
     link: "https://ecommerce-rho-six-68.vercel.app/auth/login",
   },
+  {
+    id: 5,
+    title: "FinEdge",
+    des: " Build FinEdge, a full-stack platform for expense tracking, smart budgeting, and savings optimization. Offers predictive analytics, anomaly detection, and personalized financial insights.",
+    img: "/img4.jpg",
+    iconLists: [
+      "/react.png",
+      "/GenAi.png",
+      "/react.png",
+      "/GenAi.png",
+      "/react.png",
+    ],
+    link: "https://ecommerce-rho-six-68.vercel.app/auth/login",
+  },
+
+  {
+    id: 6,
+    title: "CourseSphere - AI Course Generator",
+    des: "Built an AI-driven course generator for personalized course creation based on user preferences. Integrated a payment gateway also to manage subscriptions and limit free course generation to five.",
+    img: "/img2.jpg",
+    iconLists: [
+      "/react.png",
+      "/GenAi.png",
+      "/react.png",
+      "/GenAi.png",
+      "/react.png",
+    ],
+    link: "https://coursesphere.vercel.app/",
+  },
+
 ];
 
 const RecentProjects = () => {
