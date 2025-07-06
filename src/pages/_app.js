@@ -40,6 +40,7 @@ export default function App({ Component, pageProps }) {
   const [initialLoad, setInitialLoad] = useState(true);
   const [isActive, setIsActive] = useState(false);
   const [showCursor, setShowCursor] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -74,7 +75,15 @@ export default function App({ Component, pageProps }) {
     }
   }, [router.asPath]);
 
- 
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(typeof window !== 'undefined' && window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   useEffect(() => {
     const disableRightClick = (e) => e.preventDefault();
     const disableDevTools = (e) => {
@@ -140,7 +149,7 @@ export default function App({ Component, pageProps }) {
             </div>
           </>
         )}
-        {showCursor && <Cursor />}
+        {showCursor && !isMobile && <Cursor />}
       </main>
     </>
   );
