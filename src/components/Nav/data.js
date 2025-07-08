@@ -24,7 +24,7 @@ export const FooterLinks = [
     },
     {
         title: "LinkedIn",
-        href: "/https://www.linkedin.com/in/arshdeep-singh-virdi-a72a3a259/"
+        href: "https://www.linkedin.com/in/arshdeep-singh-virdi-a72a3a259/"
     },
     {
         title: "LeetCode",
@@ -32,7 +32,7 @@ export const FooterLinks = [
     },
     {
         title: "Instagram",
-        href: "/https://www.instagram.com/__arsh__singh/"
+        href: "https://www.instagram.com/__arsh__singh/"
     },
 
 ]
