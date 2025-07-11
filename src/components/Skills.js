@@ -94,8 +94,8 @@ const Skills = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <span className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-4 shadow-dark cursor-pointer animate-blink text-2xl mb-2" style={{ letterSpacing: '2px', minWidth: 90, minHeight: 60 }}>
-              Web
+            <span className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-4 px-8 shadow-dark cursor-pointer animate-blink text-2xl mb-2" style={{ letterSpacing: '2px', minWidth: 220, minHeight: 56, whiteSpace: 'nowrap' }}>
+              Web & AI/ML
             </span>
           </motion.div>
           <div className="w-full grid grid-cols-3 gap-3">
