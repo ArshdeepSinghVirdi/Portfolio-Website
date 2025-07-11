@@ -86,7 +86,7 @@ const Skills = () => {
         Skills
       </h2>
       {isMobile ? (
-        <div className="w-full min-h-[60vh] flex flex-wrap gap-3 justify-center items-center px-2 pb-8">
+        <div className="w-full min-h-[60vh] flex flex-col items-center px-2 pb-8">
           <motion.div
             className="w-full flex items-center justify-center mb-4"
             initial={{ opacity: 0, y: 20 }}
@@ -98,8 +98,8 @@ const Skills = () => {
               Web
             </span>
           </motion.div>
-          <div className="w-full grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
-            {skillsList.map((skill, idx) => (
+          <div className="w-full grid grid-cols-3 gap-3">
+            {skillsList.filter(skill => skill.name !== 'Data Visualization').map((skill, idx) => (
               <motion.div
                 key={idx}
                 className="flex items-center justify-center w-full"
@@ -117,6 +117,20 @@ const Skills = () => {
               </motion.div>
             ))}
           </div>
+          <motion.div
+            className="w-full flex items-center justify-center mt-4"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1 }}
+            viewport={{ once: true }}
+          >
+            <span
+              className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-4 px-8 shadow-dark cursor-pointer animate-rotate-once text-lg sm:text-xl"
+              style={{ letterSpacing: '1px', minWidth: 220, minHeight: 56, whiteSpace: 'nowrap' }}
+            >
+              Data Visualization
+            </span>
+          </motion.div>
         </div>
       ) : (
         <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight">

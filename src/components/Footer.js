@@ -15,7 +15,7 @@ const Footer = () => {
 
   return (
     <footer className="w-full border-t-2 border-solid border-dark font-medium text-lg pt-1 pb-2 sm:text-base">
-      <div className="py-6 flex flex-col md:flex-row items-center justify-between pl-6 pr-12">
+      <div className={`py-6 flex flex-col md:flex-row items-center ${isMobile ? 'justify-center px-0' : 'justify-between pl-6 pr-12'}`}>
         {isMobile ? (
           <div className="w-full flex items-center justify-center text-white">
             <div className="flex items-center justify-center w-full">
