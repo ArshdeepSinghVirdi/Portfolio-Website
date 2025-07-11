@@ -92,9 +92,9 @@ const Skills = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
-            <span className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-4 px-8 shadow-dark cursor-pointer animate-blink text-2xl mb-2" style={{ letterSpacing: '2px', minWidth: 220, minHeight: 56, whiteSpace: 'nowrap' }}>
+            <span className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-5 shadow-dark cursor-pointer animate-blink text-2xl mb-2" style={{ letterSpacing: '2px', minWidth: 220, minHeight: 56, whiteSpace: 'nowrap' }}>
               Web & AI/ML
             </span>
           </motion.div>
@@ -106,10 +106,10 @@ const Skills = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.07 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
               >
                 <span
-                  className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-2 px-4 shadow-dark cursor-pointer animate-rotate-once text-base sm:text-lg"
+                  className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-5 shadow-dark cursor-pointer animate-rotate-once text-base sm:text-lg"
                   style={{ letterSpacing: '1px', minWidth: 90, minHeight: 48 }}
                 >
                   {skill.name}
@@ -122,10 +122,10 @@ const Skills = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             <span
-              className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-4 px-8 shadow-dark cursor-pointer animate-rotate-once text-lg sm:text-xl"
+              className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark cursor-pointer animate-rotate-once text-lg sm:text-xl"
               style={{ letterSpacing: '1px', minWidth: 220, minHeight: 56, whiteSpace: 'nowrap' }}
             >
               Data Visualization
