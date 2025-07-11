@@ -40,17 +40,19 @@ const skillsList = [
   { name: "NodeJs", x: "-23vw", y: "-15vw" },
   { name: "ExpressJs", x: "15vw", y: "-14vw" },
   { name: "MongoDB", x: "36vw", y: "-5vw" },
-  { name: "Flutter", x: "0vw", y: "-20vw" },
   { name: "WordPress", x: "-7vw", y: "18vw" },
   { name: "Motion/GSap", x: "-40vw", y: "-5vw" },
-  { name: "Tailwind CSS", x: "15vw", y: "18vw" },
+  { name: "Flutter", x: "15vw", y: "18vw" },
   { name: "Git/Github", x: "20vw", y: "-5vw" },
-  { name: "AI ML", x: "41vw", y: "5vw" },
-  { name: "AutoCad", x: "-40vw", y: "8vw" },
+  { name: "Scikit-Learn", x: "41vw", y: "5vw" },
+  { name: "Typescript", x: "-40vw", y: "8vw" },
   { name: "Java", x: "36vw", y: "15vw" },
   { name: "Python", x: "35vw", y: "-12vw" },
-  { name: "C/C++", x: "-30vw", y: "16vw" },
+  { name: "Docker", x: "-30vw", y: "16vw" },
   { name: "SQL", x: "-30vw", y: "2vw" },
+  { name: "EDA", x: "-30vw", y: "2vw" },
+  { name: "Data Visualization", x: "0vw", y: "-20vw" },
+  
 ];
 
 const Skills = () => {
@@ -92,19 +94,37 @@ const Skills = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <span className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-4 shadow-dark cursor-pointer">Web</span>
+            <span className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-4 shadow-dark cursor-pointer animate-blink text-2xl mb-2" style={{ letterSpacing: '2px', minWidth: 90, minHeight: 60 }}>
+              Web
+            </span>
           </motion.div>
-          {skillsList.map((skill, idx) => (
-            <Skill key={idx} name={skill.name} isMobile={true} />
-          ))}
+          <div className="w-full grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+            {skillsList.map((skill, idx) => (
+              <motion.div
+                key={idx}
+                className="flex items-center justify-center w-full"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.07 }}
+                viewport={{ once: true }}
+              >
+                <span
+                  className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-2 px-4 shadow-dark cursor-pointer animate-rotate-once text-base sm:text-lg"
+                  style={{ letterSpacing: '1px', minWidth: 90, minHeight: 48 }}
+                >
+                  {skill.name}
+                </span>
+              </motion.div>
+            ))}
+          </div>
         </div>
       ) : (
         <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight">
           <motion.div
-            className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-6 shadow-dark cursor-pointer"
+            className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-4 shadow-dark cursor-pointer"
             whileHover={{ scale: 1.2 }}
           >
-            Web
+            Web & AI/ML
           </motion.div>
           {skillsList.map((skill, idx) => (
             <Skill key={idx} name={skill.name} x={skill.x} y={skill.y} controls={controls} />

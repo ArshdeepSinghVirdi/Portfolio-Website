@@ -18,7 +18,7 @@ const Footer = () => {
       <div className="py-6 flex flex-col md:flex-row items-center justify-between pl-6 pr-12">
         {isMobile ? (
           <div className="w-full flex items-center justify-center text-white">
-            <div className="flex items-center">
+            <div className="flex items-center justify-center w-full">
               Built with{" "}
               <span className="text-primary text-2xl px-1">&#9825;</span> by&nbsp;
               <Link

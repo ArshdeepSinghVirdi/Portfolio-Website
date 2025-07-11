@@ -21,6 +21,8 @@ module.exports = {
       animation: {
         'spin-slow': 'spin 8s linear infinite',
         aurora: "aurora 60s linear infinite",
+        blink: 'blink 2s linear 1',
+        'rotate-once': 'rotate-once 1s linear 1',
       },
       backgroundImage: {
         circularLight: 'repeating-radial-gradient(rgba(255,255,255,0.3) 1px, #000000 10px, #000000 100px)',
@@ -33,6 +35,14 @@ module.exports = {
           to: {
             backgroundPosition: "350% 50%, 350% 50%",
           },
+        },
+        blink: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.2' },
+        },
+        'rotate-once': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
         },
       },
     },
