@@ -29,17 +29,14 @@
 }
 
 .nav .footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .nav .footer a {
-    width: 100%;
+    width: 50%;
     color: black;
     text-decoration: none;
-    text-align: center;
-    padding: 8px 0;
 }
 
 @media (max-width: 768px) { 
@@ -60,10 +57,6 @@
 
     .nav .body a {
         font-size: 30px;
-    }
-
-    .nav .footer a {
-        font-size: 18px;
     }
 }
 
@@ -89,12 +82,8 @@
         font-size: 25px; 
     }
 
-    .nav .footer {
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-    }
     .nav .footer a {
-        font-size: 16px;
-        padding: 6px 0;
+        width: 100%;
+        text-align: center; 
     }
 }

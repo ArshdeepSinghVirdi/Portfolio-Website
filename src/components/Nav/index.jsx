@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Links, FooterLinks } from "./data";
 import styles from "./style.module.scss";
 import { motion } from "framer-motion";
@@ -47,6 +47,16 @@ const slideIn = {
 
 export default function Index() {
   const [isOpen, setIsOpen] = useState(false); 
+  const [showFooter, setShowFooter] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setShowFooter(window.innerWidth > 768);
+    };
+    handleResize(); // set initially
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className={`${styles.nav} ${isOpen ? styles.open : ""}`}>
@@ -74,23 +84,25 @@ export default function Index() {
           );
         })}
       </div>
-      <div className={styles.footer}>
-        {FooterLinks.map((link, i) => {
-          return (
-            <motion.a
-              href={link.href}
-              key={`f_${i}`}
-              variants={slideIn}
-              custom={i}
-              animate="enter"
-              exit="exit"
-              initial="initial"
-            >
-              {link.title}
-            </motion.a>
-          );
-        })}
-      </div>
+      {showFooter && (
+        <div className={styles.footer}>
+          {FooterLinks.map((link, i) => {
+            return (
+              <motion.a
+                href={link.href}
+                key={`f_${i}`}
+                variants={slideIn}
+                custom={i}
+                animate="enter"
+                exit="exit"
+                initial="initial"
+              >
+                {link.title}
+              </motion.a>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
