@@ -41,7 +41,7 @@ const Experience = () => {
         <ul className='w-full flex flex-col items-start justify-between ml-4 text-white'>
           <Details position="Web Development Intern" company="Eshway" time="August 2023 - October 2023" work="I've recently completed two impactful projects in my current role. In one, I served as a full-stack developer, contributing to both frontend and backend aspects. The second project focused on React.js, where I led frontend development, creating efficient and user-friendly interfaces. These experiences have enriched my skill set and deepened my understanding of both full-stack development and frontend specialization. Excited to apply these skills in future endeavors." companyLink="https://eshway.com/" />
 
-          <Details position="Chairperson of GeeksForGeeks SRMIST Delhi-NCR Campus Club" company="GeeksForGeeks" time="June 2024 - Present" companyLink="https://www.jpmorgan.com/global" />
+          <Details position="Chairperson of GeeksForGeeks SRMIST Delhi-NCR Campus Club" company="GeeksForGeeks" time="July 2024 - July 2025" companyLink="https://www.jpmorgan.com/global" />
 
           <Details position="Internshala Student Partner & Training Captain" company="Internshala" time="June 2023 - July 2023" work="As an Internshala Student Partner, I dedicated my efforts to promoting their courses. Successfully completing my tasks not only resulted in substantial cash rewards but also earned me valuable in-kind rewards. This experience enhanced my skills in marketing and promotion while offering tangible recognition for my contributions." companyLink="https://internshala.com/" />
         </ul>
