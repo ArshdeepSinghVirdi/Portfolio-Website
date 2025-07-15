@@ -84,25 +84,23 @@ export default function Index() {
           );
         })}
       </div>
-      {showFooter && (
-        <div className={styles.footer}>
-          {FooterLinks.map((link, i) => {
-            return (
-              <motion.a
-                href={link.href}
-                key={`f_${i}`}
-                variants={slideIn}
-                custom={i}
-                animate="enter"
-                exit="exit"
-                initial="initial"
-              >
-                {link.title}
-              </motion.a>
-            );
-          })}
-        </div>
-      )}
+      <div className={styles.footer}>
+        {FooterLinks.map((link, i) => {
+          return (
+            <motion.a
+              href={link.href}
+              key={`f_${i}`}
+              variants={slideIn}
+              custom={i}
+              animate="enter"
+              exit="exit"
+              initial="initial"
+            >
+              {link.title}
+            </motion.a>
+          );
+        })}
+      </div>
     </div>
   );
 }
