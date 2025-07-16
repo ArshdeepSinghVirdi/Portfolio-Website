@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Links, FooterLinks } from "./data";
 import styles from "./style.module.scss";
 import { motion } from "framer-motion";
