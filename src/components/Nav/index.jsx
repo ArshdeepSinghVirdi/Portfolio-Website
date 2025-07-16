@@ -47,16 +47,6 @@ const slideIn = {
 
 export default function Index() {
   const [isOpen, setIsOpen] = useState(false); 
-  const [showFooter, setShowFooter] = useState(true);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setShowFooter(window.innerWidth > 768);
-    };
-    handleResize(); // set initially
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <div className={`${styles.nav} ${isOpen ? styles.open : ""}`}>
