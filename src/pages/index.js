@@ -9,29 +9,32 @@ import HireMe from "../components/HireMe";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const AnimatedRectangle = ({ imageSrc, width, height, className = "" }) => (
-  <div
-    className={`rounded-full inline-block overflow-hidden animate-pulse ${className}`}
-    style={{
-      width,
-      height,
-      perspective: "1000px",
-    }}
-  >
+const AnimatedRectangle = ({ imageSrc, width, height, className = "" }) => {
+  return (
     <div
-      className="w-full h-full transition-transform duration-500 ease-in-out transform hover:rotate-x-12 hover:rotate-y-12 hover:scale-110"
-      style={{ transformStyle: "preserve-3d" }}
+      className={`rounded-full inline-block overflow-hidden animate-pulse ${className}`}
+      style={{
+        width,
+        height,
+        perspective: "1000px",
+      }}
     >
-      <Image
-        src={imageSrc}
-        alt="Animated Rectangle"
-        layout="fill"
-        objectFit="cover"
-        className="transition-transform duration-500 ease-in-out"
-      />
+      <div
+        className="w-full h-full transition-transform duration-500 ease-in-out transform hover:rotate-x-12 hover:rotate-y-12 hover:scale-110"
+        style={{ transformStyle: "preserve-3d" }}
+      >
+        <Image
+          src={imageSrc}
+          alt="Animated Rectangle"
+          fill
+          style={{ objectFit: "cover" }}
+          className="transition-transform duration-500 ease-in-out"
+          sizes="(max-width: 768px) 200px, 260px"
+        />
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default function Home() {
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
@@ -42,9 +45,20 @@ export default function Home() {
       once: true,
     });
 
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    // Debounce resize listener for better performance
+    let resizeTimeout;
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        setWindowWidth(window.innerWidth);
+      }, 150);
+    };
+    
+    window.addEventListener('resize', handleResize, { passive: true });
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      clearTimeout(resizeTimeout);
+    };
   }, []);
 
   const getResponsiveClasses = () => {

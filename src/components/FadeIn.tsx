@@ -8,7 +8,15 @@ const fadeInVariants = {
 
 const FadeIn: React.FC = () => {
   return (
-    <motion.div initial="hidden" animate="visible" variants={fadeInVariants} className="text-4xl text-white">
+    <motion.div 
+      initial="hidden" 
+      animate="visible" 
+      variants={fadeInVariants} 
+      className="text-4xl text-white whitespace-nowrap px-4"
+      style={{
+        fontSize: 'clamp(1.25rem, 4vw, 2.25rem)'
+      }}
+    >
       Hey, I am Arshdeep Singh Virdi
     </motion.div>
   );

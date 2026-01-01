@@ -44,68 +44,82 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
-    if (router.pathname === "/" && initialLoad) {
-      const isCountingComplete = sessionStorage.getItem("countingComplete");
-      if (isCountingComplete) {
-        setCountingComplete(true);
-        setShowCursor(true);
-        setInitialLoad(false);
-      } else {
+    // Check if counting animation has been shown in this session
+    const hasSeenCounting = typeof window !== 'undefined' && sessionStorage.getItem("countingComplete") === "true";
+    
+    if (router.pathname === "/") {
+      // On home page
+      if (initialLoad && !hasSeenCounting) {
+        // First time loading home page - show counting animation
         const timer = setTimeout(() => {
           setCountingComplete(true);
           setInitialLoad(false);
           setShowCursor(true);
-          sessionStorage.setItem("countingComplete", "true");
+          if (typeof window !== 'undefined') {
+            sessionStorage.setItem("countingComplete", "true");
+          }
         }, 4000);
-
         return () => clearTimeout(timer);
+      } else {
+        // Returning to home page or counting already shown - skip animation
+        setCountingComplete(true);
+        setShowCursor(true);
+        if (initialLoad) {
+          setInitialLoad(false);
+        }
       }
     } else {
+      // Not on home page - show content immediately
       setCountingComplete(true);
       setShowCursor(true);
+      if (initialLoad) {
+        setInitialLoad(false);
+      }
     }
-  }, [initialLoad, router.pathname]);
-
-  useEffect(() => {
-    if (router.asPath === "/") {
-      setCountingComplete(false);
-      setInitialLoad(true);
-      setShowCursor(false);
-      sessionStorage.removeItem("countingComplete");
-    }
-  }, [router.asPath]);
+  }, [router.pathname, initialLoad]);
 
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(typeof window !== 'undefined' && window.innerWidth <= 768);
     };
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  useEffect(() => {
-    const disableRightClick = (e) => e.preventDefault();
-    const disableDevTools = (e) => {
-      if (
-        (e.ctrlKey && e.shiftKey && e.key === "I") || 
-        (e.ctrlKey && e.shiftKey && e.key === "C") || 
-        (e.ctrlKey && e.shiftKey && e.key === "J") || 
-        (e.ctrlKey && e.key === "U") || 
-        e.key === "F12" 
-      ) {
-        e.preventDefault();
-        alert("Inspecting is disabled on this site.");
-      }
+    
+    // Debounce resize listener for better performance
+    let resizeTimeout;
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(checkMobile, 150);
     };
-    document.addEventListener("contextmenu", disableRightClick);
-    document.addEventListener("keydown", disableDevTools);
-
+    
+    window.addEventListener('resize', handleResize, { passive: true });
     return () => {
-      document.removeEventListener("contextmenu", disableRightClick);
-      document.removeEventListener("keydown", disableDevTools);
+      window.removeEventListener('resize', handleResize);
+      clearTimeout(resizeTimeout);
     };
   }, []);
+
+  // useEffect(() => {
+  //   const disableRightClick = (e) => e.preventDefault();
+  //   const disableDevTools = (e) => {
+  //     if (
+  //       (e.ctrlKey && e.shiftKey && e.key === "I") || 
+  //       (e.ctrlKey && e.shiftKey && e.key === "C") || 
+  //       (e.ctrlKey && e.shiftKey && e.key === "J") || 
+  //       (e.ctrlKey && e.key === "U") || 
+  //       e.key === "F12" 
+  //     ) {
+  //       e.preventDefault();
+  //       alert("Inspecting is disabled on this site.");
+  //     }
+  //   };
+  //   document.addEventListener("contextmenu", disableRightClick);
+  //   document.addEventListener("keydown", disableDevTools);
+
+  //   return () => {
+  //     document.removeEventListener("contextmenu", disableRightClick);
+  //     document.removeEventListener("keydown", disableDevTools);
+  //   };
+  // }, []);
 
   return (
     <>

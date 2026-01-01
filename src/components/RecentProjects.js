@@ -105,7 +105,8 @@ const RecentProjects = () => {
           {projects.map(({ id, title, des, img, iconLists, link }) => (
             <div
               key={id}
-              data-aos="flip-down" data-aos-duration="3000" 
+              data-aos="flip-down" 
+              data-aos-duration="3000"
               className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem]  flex items-center justify-center sm:w-[570px] w-full max-w-[80vw]"
             >
               <PinContainer title={link} href={link}>
