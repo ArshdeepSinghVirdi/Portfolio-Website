@@ -49,7 +49,7 @@ const Education = () => {
             type="Bachelor of Technology in Computer Science"
             time="2022-Present"
             place="SRM Institute of Science and Technology"
-            CGPA="9.82"
+            CGPA="9.72"
           />
 
           <Details

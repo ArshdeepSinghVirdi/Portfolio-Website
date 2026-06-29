@@ -51,7 +51,7 @@ const skillsList = [
   { name: "Docker", x: "-30vw", y: "16vw" },
   { name: "SQL", x: "-30vw", y: "2vw" },
   { name: "EDA", x: "-30vw", y: "2vw" },
-  { name: "Data Visualization", x: "0vw", y: "-20vw" },
+  { name: "Data Visualization/Collection", x: "0vw", y: "-20vw" },
   
 ];
 

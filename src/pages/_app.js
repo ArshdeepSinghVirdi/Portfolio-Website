@@ -98,28 +98,28 @@ export default function App({ Component, pageProps }) {
     };
   }, []);
 
-  // useEffect(() => {
-  //   const disableRightClick = (e) => e.preventDefault();
-  //   const disableDevTools = (e) => {
-  //     if (
-  //       (e.ctrlKey && e.shiftKey && e.key === "I") || 
-  //       (e.ctrlKey && e.shiftKey && e.key === "C") || 
-  //       (e.ctrlKey && e.shiftKey && e.key === "J") || 
-  //       (e.ctrlKey && e.key === "U") || 
-  //       e.key === "F12" 
-  //     ) {
-  //       e.preventDefault();
-  //       alert("Inspecting is disabled on this site.");
-  //     }
-  //   };
-  //   document.addEventListener("contextmenu", disableRightClick);
-  //   document.addEventListener("keydown", disableDevTools);
+  useEffect(() => {
+    const disableRightClick = (e) => e.preventDefault();
+    const disableDevTools = (e) => {
+      if (
+        (e.ctrlKey && e.shiftKey && e.key === "I") || 
+        (e.ctrlKey && e.shiftKey && e.key === "C") || 
+        (e.ctrlKey && e.shiftKey && e.key === "J") || 
+        (e.ctrlKey && e.key === "U") || 
+        e.key === "F12" 
+      ) {
+        e.preventDefault();
+        alert("Inspecting is disabled on this site.");
+      }
+    };
+    document.addEventListener("contextmenu", disableRightClick);
+    document.addEventListener("keydown", disableDevTools);
 
-  //   return () => {
-  //     document.removeEventListener("contextmenu", disableRightClick);
-  //     document.removeEventListener("keydown", disableDevTools);
-  //   };
-  // }, []);
+    return () => {
+      document.removeEventListener("contextmenu", disableRightClick);
+      document.removeEventListener("keydown", disableDevTools);
+    };
+  }, []);
 
   return (
     <>

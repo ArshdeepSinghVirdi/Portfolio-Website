@@ -126,7 +126,7 @@ export default function Home() {
             data-aos="fade-up"
           >
             <h1 className={`${fontSize} font-bold tracking-wide text-white mb-4 lg:mb-0 lg:mr-10`}>
-              {windowWidth <= 768 ? 'Explorer' : 'AI EXPLORER'}
+              {windowWidth <= 768 ? 'Explorer' : 'AI ENGINEER'}
             </h1>
             <AnimatedRectangle
               imageSrc="/Capsule1.png"
